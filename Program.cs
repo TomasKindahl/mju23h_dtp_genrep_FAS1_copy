@@ -25,12 +25,12 @@
             }
             public void Print()
             {
-                Console.WriteLine($"{start,-10} {Status(),-9} {description,-40}");
+                Console.WriteLine($"{start,-24} {Status(),-9} {description,-40}");
             }
         }
         static void Main(string[] args)
         {
-            //  3. Add 'list' that lists all active and waiting tasks
+            //  3.b. Make 'list' only list all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
             //  6. ... continue here ...
@@ -47,6 +47,13 @@
                 if (command == "quit")
                 {
                     break;
+                }
+                else if (command == "list")
+                {
+                    foreach(Todo task in todolist)
+                    {
+                        task.Print();
+                    }
                 }
                 else
                 {
