@@ -44,11 +44,14 @@
             {
                 Console.Write("command: ");
                 command = Console.ReadLine();
-                if(command == "quit")
+                if (command == "quit")
                 {
                     break;
                 }
-                // NYI: respons på felaktigt kommando
+                else
+                {
+                    Console.WriteLine($"Unknown command: '{command}'");
+                }
             } while (command != "quit");
             Console.WriteLine("Bye!");
         }
