@@ -30,7 +30,6 @@
         }
         static void Main(string[] args)
         {
-            //  3.b. Make 'list' only list all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
             //  6. ... continue here ...
@@ -52,7 +51,9 @@
                 {
                     foreach(Todo task in todolist)
                     {
-                        task.Print();
+                        // FIXME: compare with integer instead of string:
+                        if (task.Status() == "waiting" || task.Status() == "active")
+                            task.Print();
                     }
                 }
                 else
