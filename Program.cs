@@ -30,11 +30,15 @@
         }
         static void Main(string[] args)
         {
-            //  2. Create dummy todo items
             //  3. Add 'list' that lists all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
             //  6. ... continue here ...
+            todolist = new List<Todo>();
+            todolist.Add(new Todo("vattna blommorna"));
+            todolist.Add(new Todo("tvätta bilen"));
+            todolist.Add(new Todo("koka soppa"));
+
             string command;
             do
             {
@@ -44,6 +48,7 @@
                 {
                     break;
                 }
+                // NYI: respons på felaktigt kommando
             } while (command != "quit");
             Console.WriteLine("Bye!");
         }
