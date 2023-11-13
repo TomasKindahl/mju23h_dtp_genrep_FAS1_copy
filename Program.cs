@@ -30,8 +30,6 @@
         }
         static void Main(string[] args)
         {
-            //  5. Add 'new' that enables you to add new tasks
-            //  6. ... continue here ...
             todolist = new List<Todo>();
             todolist.Add(new Todo("vattna blommorna"));
             todolist.Add(new Todo("tvätta bilen"));
@@ -42,6 +40,7 @@
             {
                 Console.Write("command: ");
                 command = Console.ReadLine();
+                //  6. ... continue here ...
                 if (command == "quit")
                 {
                     break;
@@ -60,6 +59,13 @@
                     {
                         task.Print();
                     }
+                }
+                else if (command == "new")
+                {
+                    Console.Write("add a description: ");
+                    string descr = Console.ReadLine();
+                    Todo newTask = new Todo(descr);
+                    todolist.Add(newTask);
                 }
                 else
                 {
