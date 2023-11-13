@@ -30,12 +30,22 @@
         }
         static void Main(string[] args)
         {
-            //  1. Create a REPL with 'quit':
             //  2. Create dummy todo items
             //  3. Add 'list' that lists all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
             //  6. ... continue here ...
+            string command;
+            do
+            {
+                Console.Write("command: ");
+                command = Console.ReadLine();
+                if(command == "quit")
+                {
+                    break;
+                }
+            } while (command != "quit");
+            Console.WriteLine("Bye!");
         }
     }
 }
